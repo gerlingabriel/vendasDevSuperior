@@ -6,10 +6,10 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.devsuperior.dsmeta.entities.Sales;
+import com.devsuperior.dsmeta.entities.Sale;
 
-public interface SaleRepository extends JpaRepository<Sales, Long> {
+public interface SaleRepository extends JpaRepository<Sale, Long> {
 
-    Page<Sales> findByDateBetween(LocalDate start,LocalDate end, Pageable pageable);
+    Page<Sale> findByDateBetween(LocalDate start,LocalDate end, Pageable pageable);
     
 }

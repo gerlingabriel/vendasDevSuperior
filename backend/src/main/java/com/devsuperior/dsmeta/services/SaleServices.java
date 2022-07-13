@@ -7,7 +7,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import com.devsuperior.dsmeta.entities.Sales;
+import com.devsuperior.dsmeta.entities.Sale;
 import com.devsuperior.dsmeta.repositories.SaleRepository;
 
 @Service
@@ -16,7 +16,7 @@ public class SaleServices {
     @Autowired
     private SaleRepository repository;
 
-    public Page<Sales> findAll(String dateStart, String dateFinal, Pageable pageable){
+    public Page<Sale> findAll(String dateStart, String dateFinal, Pageable pageable){
 
         LocalDate now = dateStart == null ? LocalDate.now(): LocalDate.parse(dateStart);
     

@@ -10,7 +10,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "tb_sales")
-public class Sales {
+public class Sale {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,10 +21,10 @@ public class Sales {
     private Double amount;
     private LocalDate date;
 
-    public Sales() {
+    public Sale() {
     }
     
-    public Sales(String sellerName, Integer visited, Integer deals, Double amount, LocalDate date) {
+    public Sale(String sellerName, Integer visited, Integer deals, Double amount, LocalDate date) {
         this.sellerName = sellerName;
         this.visited = visited;
         this.deals = deals;
