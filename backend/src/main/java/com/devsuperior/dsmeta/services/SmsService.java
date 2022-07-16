@@ -39,7 +39,9 @@ public class SmsService {
 
         checkIfIdExists(sale);
 
-        String msg = "Vendedor" +  sale.get().getSellerName();
+        String msg = "Vendedor: " +  sale.get().getSellerName() + 
+			" fez no dia " + sale.get().getDate() + 
+			" vendas no valor da Venda: R$ " + String.format("%.2f", sale.get().getAmount());
 
 		PhoneNumber to = new PhoneNumber(twilioPhoneTo);
 		PhoneNumber from = new PhoneNumber(twilioPhoneFrom);
